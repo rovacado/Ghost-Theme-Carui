@@ -17,11 +17,13 @@
 		{{ghost_head}}
 	</head>
 	<body class="{{body_class}}">
-		<div class="uk-container-large">
-			{{> header}}
-			{{{body}}}
-			{{> footer}}
-			{{ghost_foot}}
+		{{> header}}
+		<div class="uk-section uk-section-muted">
+			<div class="uk-container uk-container-large uk-align-center">
+				{{{body}}}
+			</div>
 		</div>
+		{{> footer}}
+		{{ghost_foot}}
 	</body>
 </html>
