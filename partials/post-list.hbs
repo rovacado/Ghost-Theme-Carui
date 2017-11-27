@@ -1,23 +1,23 @@
-<article class="rrr-article {{post_class}}">
-  <header class="article-header">
-    <h2 class="uk-article-title"><a href="/{{slug}}" rel="bookmark">{{title}}</a></h2>
-    <p class="uk-article-meta">
-      Written by
-      <span class="author">{{author.name}}</span>
-      on
-      <time class="updated"
-        datetime="{{date published_at format='MMMM, DD YYYY'}}"
-        pubdate="">
-        {{date published_at format='MMMM, DD YYYY'}}
-      </time>
-    </p>
-  </header>
-  <section class="article-excerpt">
-    <p>{{excerpt}}&hellip;</p>
-  </section>
-  <footer class="article-footer">
-    <p class="uk-article-more">
-      <a href="{{url}}" title="{{title}}">Continue Reading</a>
-    </p>
-  </footer>
-</article>
+<div class="uk-card uk-card-hover">
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        {{#if author.profile_image}}
+        <img class="uk-border-circle" width="40" height="40" src="{{author.profile_image}}">
+        {{/if}}
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title uk-margin-remove-bottom">{{title}}</h3>
+        <p class="uk-text-meta uk-margin-remove-top">
+          Posted by {{author.name}} on <time class="updated" datetime="{{date published_at format='MMMM, DD YYYY'}}" pubdate="">{{date published_at format='MMMM, DD YYYY'}}</time>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <p>{{excerpt words="30"}}</p>
+  </div>
+  <div class="uk-card-footer">
+    <a href="{{url}}" class="uk-button uk-button-text">Read more</a>
+  </div>
+</div>
