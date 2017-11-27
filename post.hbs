@@ -1,8 +1,10 @@
 {{!< default}}
 <div class="uk-section uk-section-muted">
-	<div class="uk-container uk-container-large">
-  {{#post}}
-      {{> post-full}}
-  {{/post}}
+	<div class="uk-container uk-width-4-5@m uk-flex uk-flex-center" >
+		<div class="uk-child-width-1-1" uk-grid>
+			{{#post}}
+			{{> post-full}}
+			{{/post}}
+		</div>
 	</div>
 </div>

@@ -3,16 +3,12 @@
 	<head>
 		<meta charset="utf-8">
 		<title>{{@blog.title}}</title>
-		<meta name="description" content="{{@blog.description}}">
 		<meta name="author" content="Rovacado">
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{asset "css/uikit.min.css"}}">
 		<link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
-		<script src="{{asset "js/uikit.min.js"}}"></script>
-		<script src="{{asset "js/uikit-icons.min.js"}}"></script>
-		<link rel="alternate" type="application/rss+xml" title="{{@blog.title}} » Feed" href="{{@blog.url}}/rss">
 		<!--[if lt IE 9]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 		<script src="{{asset "js/respond.min.js"}}"></script>
@@ -23,6 +19,8 @@
 		{{> header}}
 		{{{body}}}
 		{{> footer}}
+		<script src="{{asset "js/uikit.min.js"}}"></script>
+		<script src="{{asset "js/uikit-icons.min.js"}}"></script>
 		{{ghost_foot}}
 	</body>
 </html>

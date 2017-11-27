@@ -1,27 +1,21 @@
-<article class="rrr-article {{post_class}}">
-  <header class="article-header">
-    <h1 class="uk-article-title"><a href="/{{slug}}" rel="bookmark">{{title}}</a></h1>
-    <p class="uk-article-meta">
-      Written by
-      <span class="author">{{author.name}}</span>
-      on
-      <time class="updated"
-        datetime="{{date published_at format='MMMM, DD YYYY'}}"
-        pubdate="">
-        {{date published_at format='MMMM, DD YYYY'}}
-      </time>
-    </p>
-    {{#if profile_image}}
-      <figure class="featured-image">
-        <img src="/content/images/{{img_url profile_image}}" class="attachment-post-thumbnail" alt="">
-      </figure>
-    {{/if}}
-  </header>
-
-  <section class="article-content">
-    {{content}}
-  </section>
-
-  <footer class="article-footer">
-  </footer>
-</article>
+<div class="uk-card">
+  <div class="uk-card-header">
+    <div class="uk-grid-small uk-flex-middle" uk-grid>
+      <div class="uk-width-auto">
+        {{#if author.profile_image}}
+        <img class="uk-border-circle" width="80" height="80" src="{{author.profile_image}}">
+        {{/if}}
+      </div>
+      <div class="uk-width-expand">
+        <h3 class="uk-card-title uk-margin-remove-bottom">{{title}}</h3>
+        <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">
+          Posted by {{author.name}} on <time class="updated" datetime="{{date published_at format='MMMM, DD YYYY'}}" pubdate="">{{date published_at format='MMMM, DD YYYY'}}</time>
+        </p>
+        <p  class="uk-text-meta uk-margin-remove-top">{{tags separator=" &bull; " prefix="Tagged in: "}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="uk-card-body">
+    <p>{{content}}</p>
+  </div>
+</div>
