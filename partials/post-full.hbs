@@ -8,10 +8,9 @@
       </div>
       <div class="uk-width-expand">
         <h1 class="uk-card-title uk-margin-remove-bottom">{{title}}</h1>
-        <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">
-          Posted by {{author.name}} on <time class="updated" datetime="{{date published_at format='MMMM, DD YYYY'}}" pubdate="">{{date published_at format='MMMM, DD YYYY'}}</time>
-        </p>
-        <p  class="uk-text-meta uk-margin-remove-top">{{tags separator=" &bull; " prefix="Tagged in: "}}</p>
+        <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">Posted by {{author.name}} on <time class="updated" datetime="{{date published_at format='MMMM, DD YYYY'}}" pubdate="">{{date published_at format='MMMM, DD YYYY'}}</time></p>
+        <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">{{tags separator=" &bull; " prefix="Tagged in: "}}</p>
+        <p class="uk-text-meta uk-margin-remove-top uk-margin-remove-bottom">Find more posts by{{#author}}<a href="{{url}}"> {{name}}</a> • Social:{{#if twitter}}<a href="{{twitter_url}}"> <i class="fab fa-twitter-square"></i></a>{{/if}}{{#if facebook}}<a href="{{facebook_url}}"> <i class="fab fa-facebook-square"></i></a>{{/if}}{{/author}}</p>
       </div>
     </div>
   </div>

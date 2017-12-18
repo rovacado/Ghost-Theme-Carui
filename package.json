@@ -1,13 +1,13 @@
 {
     "name": "Carui",
     "description": "A UIkit based theme by Rovacado",
-    "version": "0.2.2",
+    "version": "0.2.4",
     "engines": {
         "ghost": ">=1.0.0"
     },
     "license": "MIT",
     "author": {
-        "email": "rovacado@email.here"
+        "email": "rovacado@gmail.com"
     },
     "config": {
         "posts_per_page": 6
